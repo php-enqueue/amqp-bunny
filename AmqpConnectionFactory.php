@@ -94,7 +94,7 @@ class AmqpConnectionFactory implements InteropAmqpConnectionFactory, DelayStrate
 //                $bunnyConfig['path'] = 'enqueue';//$this->config->getOption('path', $this->config->getOption('vhost'));
 //            }
 
-            if ($this->config->getHeartbeat()) {
+            if (null !== $this->config->getHeartbeat()) {
                 $bunnyConfig['heartbeat'] = $this->config->getHeartbeat();
             }
 
